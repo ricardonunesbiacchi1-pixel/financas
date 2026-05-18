@@ -1,266 +1,69 @@
 @import "tailwindcss";
-
-/* ========================= */
-/* RESET */
-/* ========================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#020617;
-  color:white;
-  font-family:Arial, Helvetica, sans-serif;
-  overflow-x:hidden;
-}
-
-/* ========================= */
-/* SCROLL */
-/* ========================= */
-
-::-webkit-scrollbar{
-  width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-  background:#2563eb;
   border-radius:999px;
 }
 
-/* ========================= */
-/* LAYOUT */
-/* ========================= */
-
-main{
-  background:
-    radial-gradient(circle at top left,#172554 0%,#020617 40%),
-    radial-gradient(circle at bottom right,#0f172a 0%,#020617 50%);
-  min-height:100vh;
-}
-
-/* ========================= */
-/* SIDEBAR */
-/* ========================= */
-
-aside{
-  background:rgba(8,15,35,0.95);
-  backdrop-filter:blur(14px);
-  border-right:1px solid rgba(255,255,255,0.06);
-}
-
-aside h1{
-  color:white;
-  font-weight:800;
-  letter-spacing:1px;
-}
-
-aside button{
-  transition:0.2s;
-  border-radius:18px;
-  font-weight:600;
-}
-
-aside button:hover{
-  background:rgba(255,255,255,0.06);
-  transform:translateX(4px);
-}
-
-aside button.bg-violet-600{
-  background:linear-gradient(135deg,#2563eb,#3b82f6) !important;
-  box-shadow:0 10px 25px rgba(37,99,235,0.35);
-}
-
-/* ========================= */
-/* CARDS */
-/* ========================= */
-
-.bg-white\/5{
-  background:rgba(15,23,42,0.82) !important;
-  backdrop-filter:blur(10px);
+.glass{
+  background:rgba(15,23,42,0.72);
+  backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,0.06);
+}
+
+.card-hover{
   transition:0.25s;
 }
 
-.bg-white\/5:hover{
-  transform:translateY(-3px);
-  border-color:rgba(59,130,246,0.5);
-}
-
-/* ========================= */
-/* TEXTOS */
-/* ========================= */
-
-.text-zinc-400{
-  color:#94a3b8 !important;
-}
-
-/* ========================= */
-/* INPUTS */
-/* ========================= */
-
-input,
-select{
-  background:#0f172a !important;
-  border:1px solid rgba(255,255,255,0.08);
-  color:white;
-  outline:none;
-  transition:0.2s;
-}
-
-input:focus,
-select:focus{
+.card-hover:hover{
+  transform:translateY(-4px);
   border-color:#3b82f6;
-  box-shadow:0 0 0 4px rgba(59,130,246,0.15);
 }
 
-/* ========================= */
-/* BOTÕES */
-/* ========================= */
-
-button{
-  transition:0.2s;
+.gradient-btn{
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
-button:hover{
-  opacity:0.95;
+.gradient-purple{
+  background:linear-gradient(135deg,#7c3aed,#3b82f6);
 }
 
-/* ========================= */
-/* MODAL */
-/* ========================= */
-
-.fixed.inset-0{
-  backdrop-filter:blur(5px);
+.neon-shadow{
+  box-shadow:0 10px 30px rgba(59,130,246,0.35);
 }
 
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
+.mobile-nav{
+  display:none;
+}
 
-@media (max-width:768px){
-
-  /* SIDEBAR MOBILE */
+@media(max-width:768px){
 
   aside{
+    display:none !important;
+  }
+
+  .mobile-nav{
     position:fixed;
     bottom:0;
     left:0;
     width:100%;
-    height:78px;
-    z-index:9999;
+    height:76px;
+    background:rgba(8,15,35,0.96);
+    backdrop-filter:blur(12px);
     border-top:1px solid rgba(255,255,255,0.08);
-    border-right:none;
-    display:flex !important;
-    flex-direction:row !important;
-    justify-content:center;
-    align-items:center;
-    padding:8px;
-  }
-
-  aside h1{
-    display:none;
-  }
-
-  aside nav{
     display:flex;
-    flex-direction:row !important;
     justify-content:space-around;
-    width:100%;
-    gap:6px;
-  }
-
-  aside button{
-    width:58px !important;
-    min-width:58px !important;
-    height:58px !important;
-    border-radius:18px !important;
-    padding:6px !important;
-    display:flex !important;
-    flex-direction:column !important;
-    justify-content:center;
     align-items:center;
-    gap:4px;
-    font-size:10px !important;
+    z-index:9999;
   }
-
-  aside button svg{
-    width:18px;
-    height:18px;
-  }
-
-  /* MAIN */
 
   main{
-    padding:16px !important;
     padding-bottom:100px !important;
   }
 
-  /* TITULOS */
-
-  h1{
-    font-size:28px !important;
-    line-height:32px;
-  }
-
-  h2{
-    font-size:20px !important;
-  }
-
-  /* GRID */
-
-  .grid{
-    grid-template-columns:1fr !important;
-  }
-
-  /* CARDS */
-
-  .rounded-3xl{
-    border-radius:22px !important;
-  }
-
-  .p-6{
-    padding:18px !important;
-  }
-
-  .p-8{
-    padding:20px !important;
-  }
-
-  /* INPUTS */
-
-  input,
-  select{
-    min-height:54px;
-    font-size:16px !important;
-    border-radius:16px !important;
-  }
-
-  /* BOTÕES */
-
-  button{
-    min-height:52px;
-  }
-
-  /* MODAL */
-
-  .fixed .bg-\[\#081028\]{
-    width:100% !important;
-    max-width:100% !important;
-    margin:10px;
+  .mobile-card{
     border-radius:24px !important;
   }
 
-  /* GRÁFICOS */
-
-  .recharts-responsive-container{
-    font-size:12px;
+  .mobile-grid{
+    grid-template-columns:1fr !important;
   }
 
 }
