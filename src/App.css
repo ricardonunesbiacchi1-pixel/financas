@@ -1,35 +1,195 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
+@media (max-width: 768px){
 
-export default defineConfig({
-  plugins: [
-    react(),
+  /* APP */
 
-    VitePWA({
-      registerType: 'autoUpdate',
+  body{
+    overflow-x:hidden;
+  }
 
-      manifest: {
-        name: 'Finan$e',
-        short_name: 'Finan$e',
-        start_url: '/',
-        display: 'standalone',
-        background_color: '#020617',
-        theme_color: '#020617',
+  .app{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    min-height:100vh;
+  }
 
-        icons: [
-          {
-            src: '/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
-  ]
-})
+  /* SIDEBAR MOBILE */
+
+  .sidebar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:75px;
+    background:rgba(8,16,40,0.98);
+    backdrop-filter:blur(20px);
+    border-top:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    padding:8px;
+    z-index:9999;
+    overflow-x:auto;
+  }
+
+  .logo{
+    display:none;
+  }
+
+  .sidebar button{
+    min-width:auto;
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    font-size:11px;
+    flex-direction:column;
+    gap:4px;
+    color:#94a3b8;
+    background:transparent;
+  }
+
+  .sidebar button svg{
+    width:20px;
+    height:20px;
+  }
+
+  .sidebar button.active{
+    background:#2563eb;
+    color:white;
+    transform:none;
+  }
+
+  /* MAIN */
+
+  .main-content{
+    width:100%;
+    padding:18px;
+    padding-bottom:100px;
+  }
+
+  /* TOPBAR */
+
+  .topbar{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:25px;
+  }
+
+  .topbar h1{
+    font-size:30px;
+    line-height:36px;
+  }
+
+  .topbar p{
+    font-size:14px;
+  }
+
+  /* CARDS */
+
+  .cards{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .card{
+    width:100%;
+    border-radius:24px;
+    padding:22px;
+  }
+
+  .card h2{
+    font-size:14px;
+  }
+
+  .card p{
+    font-size:28px;
+    margin-top:10px;
+    word-break:break-word;
+  }
+
+  /* SECTIONS */
+
+  .transactions,
+  .routes,
+  .goals,
+  .planning,
+  .reports,
+  .settings{
+    padding:20px;
+    border-radius:24px;
+  }
+
+  .section-title{
+    font-size:24px;
+  }
+
+  /* ITEMS */
+
+  .transaction-item,
+  .route-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+    padding:18px;
+  }
+
+  .transaction-item h2,
+  .route-item h2{
+    font-size:20px;
+  }
+
+  /* FORMS */
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  input,
+  select{
+    width:100%;
+    font-size:16px;
+    padding:16px;
+    border-radius:16px;
+  }
+
+  /* BUTTONS */
+
+  button,
+  .primary-btn{
+    width:100%;
+    min-height:54px;
+    border-radius:16px;
+    font-size:15px;
+    font-weight:bold;
+  }
+
+  /* CHART */
+
+  .chart-container{
+    overflow-x:auto;
+    padding:15px;
+  }
+
+  /* MAP */
+
+  .map-container{
+    height:220px;
+    border-radius:20px;
+  }
+
+  /* SCROLL */
+
+  ::-webkit-scrollbar{
+    display:none;
+  }
+
+}
