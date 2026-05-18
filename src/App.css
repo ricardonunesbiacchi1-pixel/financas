@@ -1,195 +1,130 @@
+/* ===================================== */
+/* MOBILE IPHONE / ANDROID CORRIGIDO */
+/* ===================================== */
+
 @media (max-width: 768px){
 
-  /* APP */
-
   body{
-    overflow-x:hidden;
-  }
-
-  .app{
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    min-height:100vh;
-  }
-
-  /* SIDEBAR MOBILE */
-
-  .sidebar{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:75px;
-    background:rgba(8,16,40,0.98);
-    backdrop-filter:blur(20px);
-    border-top:1px solid rgba(255,255,255,0.08);
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    align-items:center;
-    padding:8px;
-    z-index:9999;
-    overflow-x:auto;
-  }
-
-  .logo{
-    display:none;
-  }
-
-  .sidebar button{
-    min-width:auto;
-    width:60px;
-    height:60px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:0;
-    font-size:11px;
-    flex-direction:column;
-    gap:4px;
-    color:#94a3b8;
-    background:transparent;
-  }
-
-  .sidebar button svg{
-    width:20px;
-    height:20px;
-  }
-
-  .sidebar button.active{
-    background:#2563eb;
+    background:#050816;
     color:white;
-    transform:none;
+    overflow-x:hidden;
   }
 
   /* MAIN */
 
-  .main-content{
+  main{
+    padding:16px !important;
+    padding-bottom:110px !important;
+  }
+
+  /* SIDEBAR */
+
+  aside{
+    position:fixed;
+    bottom:0;
+    left:0;
     width:100%;
-    padding:18px;
-    padding-bottom:100px;
+    height:82px;
+    background:#081028;
+    border-top:1px solid rgba(255,255,255,0.08);
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:space-around;
+    align-items:center;
+    padding:8px;
+    z-index:9999;
   }
 
-  /* TOPBAR */
+  aside h1{
+    display:none;
+  }
 
-  .topbar{
+  aside nav{
     display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:15px;
-    margin-bottom:25px;
+    flex-direction:row !important;
+    width:100%;
+    justify-content:space-around;
+    gap:8px;
   }
 
-  .topbar h1{
-    font-size:30px;
-    line-height:36px;
+  aside button{
+    width:60px !important;
+    height:60px !important;
+    min-width:60px !important;
+    border-radius:18px !important;
+    padding:6px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    font-size:10px !important;
+    background:transparent;
   }
 
-  .topbar p{
-    font-size:14px;
+  aside button svg{
+    width:18px;
+    height:18px;
+  }
+
+  /* TITULOS */
+
+  h1{
+    font-size:28px !important;
+    line-height:32px;
+  }
+
+  h2{
+    font-size:20px !important;
   }
 
   /* CARDS */
 
-  .cards{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+  .grid{
+    grid-template-columns:1fr !important;
   }
 
-  .card{
-    width:100%;
-    border-radius:24px;
-    padding:22px;
+  .rounded-3xl{
+    border-radius:22px !important;
   }
 
-  .card h2{
-    font-size:14px;
+  .p-6{
+    padding:18px !important;
   }
 
-  .card p{
-    font-size:28px;
-    margin-top:10px;
-    word-break:break-word;
+  .p-8{
+    padding:20px !important;
   }
 
-  /* SECTIONS */
+  /* BOTÕES */
 
-  .transactions,
-  .routes,
-  .goals,
-  .planning,
-  .reports,
-  .settings{
-    padding:20px;
-    border-radius:24px;
+  button{
+    min-height:52px;
   }
 
-  .section-title{
-    font-size:24px;
-  }
-
-  /* ITEMS */
-
-  .transaction-item,
-  .route-item{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:15px;
-    padding:18px;
-  }
-
-  .transaction-item h2,
-  .route-item h2{
-    font-size:20px;
-  }
-
-  /* FORMS */
-
-  .form-grid{
-    grid-template-columns:1fr;
-    gap:14px;
-  }
+  /* INPUTS */
 
   input,
   select{
     width:100%;
-    font-size:16px;
-    padding:16px;
-    border-radius:16px;
+    min-height:52px;
+    font-size:16px !important;
+    border-radius:16px !important;
   }
 
-  /* BUTTONS */
+  /* GRÁFICOS */
 
-  button,
-  .primary-btn{
-    width:100%;
-    min-height:54px;
-    border-radius:16px;
-    font-size:15px;
-    font-weight:bold;
+  .recharts-responsive-container{
+    font-size:12px;
   }
 
-  /* CHART */
+  /* MODAL */
 
-  .chart-container{
-    overflow-x:auto;
-    padding:15px;
-  }
-
-  /* MAP */
-
-  .map-container{
-    height:220px;
-    border-radius:20px;
-  }
-
-  /* SCROLL */
-
-  ::-webkit-scrollbar{
-    display:none;
+  .fixed .bg-\\[\\#081028\\]{
+    width:100% !important;
+    max-width:100% !important;
+    margin:12px;
+    border-radius:24px;
   }
 
 }
