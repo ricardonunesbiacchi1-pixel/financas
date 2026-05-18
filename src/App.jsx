@@ -1,10 +1,4 @@
 import { useEffect, useState } from "react";
-          Metas
-        </button>
-
-      </div>
-
-      {/* MODAL */}
       {showModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
           <div className="glass w-full max-w-md p-8 rounded-3xl">
